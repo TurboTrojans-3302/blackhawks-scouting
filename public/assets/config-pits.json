@@ -69,6 +69,19 @@
             "Mk 4i",
             "Custom"
           ]
+        },
+        {"name": "Speed",
+         "type": "dropdown",
+         "options": [
+            "Can't Move",
+            "Slow",
+            "Moderate",
+            "Fast",
+            "Other(type into textbox)"
+         ]
+        },
+        {"name": "Speed(exact)",
+         "type": "text"
         }
       ]
     },
@@ -131,6 +144,10 @@
         {
           "name": "Cycle Time Barge",
           "type": "number"
+        },
+        {
+          "name": "How often can the human player score into barge(scale of 1-10)?",
+          "type": "spinbox"
         },
         {
           "name": "Comments",
