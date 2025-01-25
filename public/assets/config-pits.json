@@ -1,5 +1,5 @@
 {
-  "heading": "Crescendo - 2024 (Pit Scouting)",
+  "heading": "REEFSCAPE - 2025 (Pit Scouting)",
   "logo": "logo.png",
   "skipTeamSelection": true,
   "pages": [
@@ -79,17 +79,18 @@
           "name": "Can Pick Up",
           "type": "multicheckbox",
           "options": [
-            "Ground",
-            "Source"
+            "Algae from Ground",
+            "Algae from reef",
+            "Coral from ground"
           ]
         },
         {
           "name": "Can Score In",
           "type": "multicheckbox",
           "options": [
-            "Speaker",
-            "Amp",
-            "Trap"
+            "Reef",
+            "Processer",
+            "Barge"
           ]
         },
         {
@@ -113,22 +114,22 @@
           "name": "Preferred Scoring Location",
           "type": "dropdown",
           "options": [
-            "Speaker",
-            "Amp",
-            "Trap"
+            "Reef",
+            "Processer",
+            "Barge"
           ],
           "defaultOption": true
         },
         {
-          "name": "Cycle Time Speaker",
+          "name": "Cycle Time Reef",
           "type": "number"
         },
         {
-          "name": "Cycle Time Amp",
+          "name": "Cycle Time Processer",
           "type": "number"
         },
         {
-          "name": "Cycle Time Trap",
+          "name": "Cycle Time Barge",
           "type": "number"
         },
         {
