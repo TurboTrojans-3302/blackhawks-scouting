@@ -1,6 +1,6 @@
 {
   "heading": "REEFSCAPE - 2025 (Pit Scouting)",
-  "logo": "logo.png",
+  "logo": "test_scouting_logo.png",
   "skipTeamSelection": true,
   "pages": [
     {
@@ -100,6 +100,7 @@
         {
           "name": "Can Pick Up",
           "type": "multicheckbox",
+          "colspan": 3,
           "options": [
             "Algae from Ground",
             "Algae from reef",
@@ -110,18 +111,12 @@
         {
           "name": "Can Score In",
           "type": "multicheckbox",
+          "colspan" : 3,
+          "rowspan": 3,
           "options": [
             "Reef",
             "Processer",
             "Barge"
-          ]
-        },
-        {
-          "name": "Scoring Methods",
-          "type": "multicheckbox",
-          "options": [
-            "Manual",
-            "Auto"
           ]
         },
         {
@@ -166,7 +161,8 @@
         },
         {
           "name": "How often can the human player score into barge(scale of 1-10)?",
-          "type": "spinbox"
+          "type": "spinbox",
+          "max": 10
         }
       ]
     },
@@ -271,11 +267,14 @@
       "widgets":[
         {
           "name": "Does it have an Autonomous Phase?",
-          "type": "checkbox"
+          "type": "checkbox",
+          "colspan": 3,
+          "rowspan": 3
         },
         {
           "name": "Can it move?",
-          "type": "checkbox"
+          "type": "checkbox",
+          "rowspan": 3
         },
         {
           "name": "Auton Coral Scoring In Trough(L1)?",
@@ -359,7 +358,8 @@
 
         {
           "name": "Rating(1-10)",
-          "type": "spinbox"
+          "type": "spinbox",
+          "max": 10
         },
         {
           "name": "Commentss",
