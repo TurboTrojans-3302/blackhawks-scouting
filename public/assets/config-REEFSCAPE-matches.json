@@ -1,0 +1,192 @@
+{
+  "heading": "REEFSCAPE - 2025(MATCH SCOUTING)",
+  "logo": "test_scouting_logo.png",
+  "pages": [
+    {
+      "name": "Setup",
+      "widgets": [
+        {
+          "name": "Scouter Name",
+          "type": "text",
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
+        },
+        {
+          "name": "Starting Position",
+          "type": "positions",
+          "file": "field.png",
+          "selectRadius": 10
+        }
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "widgets": [
+        {
+          "name": "Left Starting Zone",
+          "type": "checkbox"
+        },
+        {
+          "type": "spacer",
+          "height": 20
+        },
+        {
+          "name": "Trough(L1) Coral Scored",
+          "type": "spinbox",
+          "prefix": "Auto"
+        },
+        {
+          "name": "L2 Branch Coral Placed",
+          "type": "spinbox",
+          "max": 6,
+          "prefix": "Auto"
+        },
+        {
+          "name": "L3 Branch Coral Placed",
+          "type": "spinbox",
+          "max": 6,
+          "prefix": "Auto"
+        },
+        {
+          "name": "L4 Branch Coral Placed",
+          "type": "spinbox",
+          "max": 6,
+          "prefix": "Auto"
+        },
+        {
+          "name": "Algae Scored in Processer",
+          "type": "spinbox",
+          "prefix": "Auto"
+        },
+        {
+          "name": "Algae Scored in Net",
+          "type": "spinbox",
+          "prefix": "Auto"
+        }
+      ]
+    },
+    {
+      "name": "Teleop",
+      "widgets": [
+        {
+          "name": "Picked Up From",
+          "type": "heading",
+          "colspan": 5,
+          "align": "center"
+        },
+        {
+          "name": "Ground",
+          "type": "spinbox"
+        },
+        {
+          "name": "Processer",
+          "type": "spinbox",
+          "row": 2,
+          "col": 3
+        },
+        {
+          "name": "Scoring",
+          "type": "heading",
+          "colspan": 5,
+          "align": "center"
+        },
+        {
+          "name": "Speaker Notes",
+          "type": "spinbox"
+        },
+        {
+          "name": "Amplified Speaker Notes",
+          "type": "spinbox",
+          "row": 4,
+          "col": 3
+        },
+        {
+          "name": "Amp Notes",
+          "type": "spinbox"
+        },
+        {
+          "name": "Trap Notes",
+          "type": "spinbox",
+          "max": 3,
+          "row": 5,
+          "col": 3
+        },
+        {
+          "name": "Co-op Bonus",
+          "type": "checkbox",
+          "col": 2
+        },
+        {
+          "type": "spacer",
+          "height": 20
+        },
+        {
+          "name": "Assists",
+          "type": "spinbox"
+        }
+      ]
+    },
+    {
+      "name": "Endgame",
+      "widgets": [
+        {
+          "name": "End Location",
+          "type": "radio",
+          "options": [
+            "Onstage and Spotlit",
+            "Onstage",
+            "Parked",
+            "None"
+          ],
+          "default": 3
+        },
+        {
+          "name": "Failed Climb",
+          "type": "checkbox"
+        },
+        {
+          "name": "Robot Position",
+          "type": "radio",
+          "options": [
+            "Stage Left",
+            "Stage Right",
+            "Center Stage",
+            "None"
+          ],
+          "default": 3
+        },
+        {
+          "name": "Harmony",
+          "type": "checkbox"
+        },
+        {
+          "name": "Trap Note Positions",
+          "type": "multicheckbox",
+          "options": [
+            "Stage Left",
+            "Stage Right",
+            "Center Stage"
+          ]
+        },
+        {
+          "name": "Mechanical Failures",
+          "type": "text"
+        },
+        {
+          "name": "Stage Positions",
+          "type": "heading",
+          "colspan": 2,
+          "align": "center"
+        },
+        {
+          "type": "picture",
+          "file": "stage.png",
+          "colspan": 2,
+          "height": 250
+        }
+      ]
+    }
+  ]
+}
