@@ -81,7 +81,7 @@
           "type": "spinbox"
         },
         {
-          "name": "Source",
+          "name": "Processer",
           "type": "spinbox",
           "row": 2,
           "col": 3
