@@ -9,14 +9,14 @@
           "name": "Scouter Name",
           "type": "text",
           "validation": {
-            "comparison": "greater",
+            "comparison": "greaterOrEqual",
             "value": 0
           }
         },
         {
           "name": "Starting Position",
           "type": "positions",
-          "file": "Reefscape_Field.png",
+          "file": "2025_REEFSCAPE_Transparent_Background.png",
           "selectRadius": 10
         }
       ]
@@ -85,8 +85,8 @@
         {
           "name": "Coral Scored",
           "type": "heading",
-          "colspan": 5,
-          "align": "center"
+          "colspan": 2,
+          "col": 2
         },
         {
           "name": "L2 Branch",
@@ -103,27 +103,32 @@
         {
           "name": "Algae Scored",
           "type": "heading",
-          "colspan": 5,
-          "align":"center"
+          "colspan": 2,
+          "col": 2,
+          "align": "center",
+          "row" : 2
+        },
+        {
+          "type": "spacer",
+          "width": 5
         },
         {
           "name": "Processer",
           "type": "spinbox",
+          "labelColspan": 1,
           "max": 3,
-          "row": 5,
-          "col": 3
+          "row": 3,
+          "col": 2
         },
         {
           "name": "Barge",
-          "type": "spinbox"
+          "type": "spinbox",
+          "col": 2,
+          "row": 4
         },
         {
           "type": "spacer",
           "height": 20
-        },
-        {
-          "name": "Assists",
-          "type": "spinbox"
         }
       ]
     },
@@ -163,7 +168,7 @@
         },
         {
           "type": "picture",
-          "file": "stage.png",
+          "file": "2025_REEFSCAPE_Transparent_Background.png",
           "colspan": 2,
           "height": 250
         }

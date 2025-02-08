@@ -52,6 +52,8 @@
             "Swerve",
             "Butterfly",
             "Mecanum",
+            "Tread",
+            "Tank",
             "Other"
           ]
         },
@@ -62,7 +64,8 @@
             "Neo",
             "Falcon",
             "Cim",
-            "Kraken"
+            "Kraken",
+            "Other"
           ]
         },
         {
