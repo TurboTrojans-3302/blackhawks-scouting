@@ -16,7 +16,7 @@
         {
           "name": "Starting Position",
           "type": "positions",
-          "file": "field.png",
+          "file": "Reefscape_Field.png",
           "selectRadius": 10
         }
       ]
@@ -25,8 +25,16 @@
       "name": "Autonomous",
       "widgets": [
         {
+          "name": "Pre-Loaded Coral",
+          "type": "checkbox"
+        },
+        {
           "name": "Left Starting Zone",
           "type": "checkbox"
+        },
+        {
+          "name": "Auto RP",
+          "type":"checkbox"
         },
         {
           "type": "spacer",
@@ -71,52 +79,43 @@
       "name": "Teleop",
       "widgets": [
         {
-          "name": "Picked Up From",
+          "name": "Coral Picked up",
+          "type": "spinbox"
+        },
+        {
+          "name": "Coral Scored",
           "type": "heading",
           "colspan": 5,
           "align": "center"
         },
         {
-          "name": "Ground",
+          "name": "L2 Branch",
           "type": "spinbox"
+        },
+        {
+          "name": "L3 Branch",
+          "type": "spinbox"
+        },
+        {
+          "name": "L4 Branch",
+          "type": "spinbox"
+        },
+        {
+          "name": "Algae Scored",
+          "type": "heading",
+          "colspan": 5,
+          "align":"center"
         },
         {
           "name": "Processer",
-          "type": "spinbox",
-          "row": 2,
-          "col": 3
-        },
-        {
-          "name": "Scoring",
-          "type": "heading",
-          "colspan": 5,
-          "align": "center"
-        },
-        {
-          "name": "Speaker Notes",
-          "type": "spinbox"
-        },
-        {
-          "name": "Amplified Speaker Notes",
-          "type": "spinbox",
-          "row": 4,
-          "col": 3
-        },
-        {
-          "name": "Amp Notes",
-          "type": "spinbox"
-        },
-        {
-          "name": "Trap Notes",
           "type": "spinbox",
           "max": 3,
           "row": 5,
           "col": 3
         },
         {
-          "name": "Co-op Bonus",
-          "type": "checkbox",
-          "col": 2
+          "name": "Barge",
+          "type": "spinbox"
         },
         {
           "type": "spacer",
@@ -132,43 +131,25 @@
       "name": "Endgame",
       "widgets": [
         {
-          "name": "End Location",
-          "type": "radio",
-          "options": [
-            "Onstage and Spotlit",
-            "Onstage",
-            "Parked",
-            "None"
-          ],
-          "default": 3
-        },
-        {
-          "name": "Failed Climb",
+          "name": "CO-OP Bonus",
           "type": "checkbox"
         },
         {
-          "name": "Robot Position",
-          "type": "radio",
-          "options": [
-            "Stage Left",
-            "Stage Right",
-            "Center Stage",
-            "None"
-          ],
-          "default": 3
-        },
-        {
-          "name": "Harmony",
+          "name": "Coral RP",
           "type": "checkbox"
         },
         {
-          "name": "Trap Note Positions",
-          "type": "multicheckbox",
+          "name": "Cage Climbed",
+          "type": "dropdown",
           "options": [
-            "Stage Left",
-            "Stage Right",
-            "Center Stage"
+            "Shallow",
+            "Deep",
+            "None"
           ]
+        },
+        {
+          "name":"Barge RP",
+          "type": "checkbox"
         },
         {
           "name": "Mechanical Failures",
