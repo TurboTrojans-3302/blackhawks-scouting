@@ -41,19 +41,19 @@ jobs:
       run: find ./dist -type l -exec rm -f {} +
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
-    - with:
+      with:
         name: github-pages
         path: ./dist
 
   # Deployment job
-           deploy:
+    deploy:
           needs: build
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-runs-on: unbuntu-latest
-steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v3
+          environment:
+           name: github-pages
+           url: ${{ steps.deployment.outputs.page_url }}
+          runs-on: unbuntu-latest
+        steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v3
