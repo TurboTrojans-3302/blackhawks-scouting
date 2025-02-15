@@ -51,8 +51,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
-
-    name: Deploy to GitHub Pages
-    uses: ./.github/workflows/deploy-pages@v3
+    -steps:
+      - uses: actions/deploy-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: ./.github/workflows/deploy.yml
     id: deployment
 
