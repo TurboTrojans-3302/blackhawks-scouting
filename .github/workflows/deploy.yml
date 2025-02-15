@@ -49,10 +49,10 @@ jobs:
         deploy:
     environment:
       name: github-pages
-      uses: ./.github/workflows/deploy.yml
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
 
     name: Deploy to GitHub Pages
+    uses: ./.github/workflows/deploy.yml@actions/deploy-pages@v3
     id: deployment
-    uses:  actions/deploy-pages@v3
+
