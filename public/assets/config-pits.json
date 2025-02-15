@@ -1,378 +1,158 @@
-{
-  "heading": "REEFSCAPE - 2025 (Pit Scouting)",
-  "logo": "test_scouting_logo.png",
-  "skipTeamSelection": true,
-  "pages": [
-    {
-      "name": "Team",
-      "widgets": [
-        {
-          "name": "Team Name",
-          "type": "text"
-        },
-        {
-          "name": "Team Number",
-          "type": "number"
-        }
-      ]
-    },
 
+  {
+    "heading": "Reefscape - 2025 (Pit Scouting)",
+    "logo": "logo.png",
+    "skipTeamSelection": true,
+    "pages": [
+      {
+        "name": "Team",
+        "widgets": [
+          {
+            "name": "Team Name",
+            "type": "text"
+          },
+          {
+            "name": "Team Number",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "Robot",
+        "widgets": [
+          {
+            "name": "Height",
+            "type": "number"
+          },
+          {
+            "name": "Length",
+            "type": "number"
+          },
+          {
+            "name": "Width",
+            "type": "number"
+          },
+          {
+            "name": "Number of Batteries",
+            "type": "number"
+          },
+          {
+            "name": "Weight",
+            "type": "number"
+          },
+          {
+            "name": "Drivetrain",
+            "type": "dropdown",
+            "options": [
+              "West Coast",
+              "Swerve",
+              "Butterfly",
+              "Mecanum",
+              "Other"
+            ]
+          },
+          {
+            "name": "Swerve Motor Type",
+            "type": "dropdown",
+            "options": [
+              "Neo",
+              "Falcon",
+              "Cim",
+              "Kraken"
+            ]
+          },
+          {
+            "name": "Swerve Type",
+            "type": "dropdown",
+            "options": [
+              "No swerve",
+              "Mk 4",
+              "Mk 4i",
+              "Custom"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Match Play",
+        "widgets": [
+          {
+            "name": "Can Pick Up",
+            "type": "multicheckbox",
+            "options": [
+              "Ground Coral",
+              "Ground Algae",
+              "Reef 2.5",
+              "Reef 3.5"
+            ]
+          },
+          {
+            "name": "Can Score In",
+            "type": "multicheckbox",
+            "options": [
+              "Trough",
+              "L2",
+              "L3",
+              "L4",
+              "Proccesor",
+              "Net"
+            ]
+          },
+          {
+            "name": "Scoring Methods",
+            "type": "multicheckbox",
+            "options": [
+              "Manual",
+              "Auto"
+            ]
+          },
+          {
+            "name": "Preferred Pickup Location",
+            "type": "dropdown",
+            "options": [
+              "Ground Coral",
+              "Ground Algae",
+              "Reef 2.5",
+              "Reef 3.5"
+            ],
+            "defaultOption": true
+          },
+          {
+            "name": "Preferred Scoring Location",
+            "type": "dropdown",
+            "options": [
+              "Trough",
+              "L2",
+              "L3",
+              "L4",
+              "Proccesor",
+              "Net"
+            ],
+            "defaultOption": true
+          },
+          {
+            "name": "Cycle Time Coral -> Reef",
+            "type": "number"
+          },
+          {
+            "name": "Cycle Time Algae -> Proccesor",
+            "type": "number"
+          },
+          {
+            "name": "Cycle Time Algae -> Net",
+            "type": "number"
+          },
+          {
+            "name": "Climb Time",
+            "type": "number"
+          },
+          {
+            "name": "Comments",
+            "type": "textarea",
+            "colspan": 3
+          }
+        ]
+      }
+    ]
+  }
 
-
-
-    {
-      "name": "Robot",
-      "widgets": [
-
-        {
-          "name": "Height",
-          "type": "number"
-        },
-        {
-          "name": "Length",
-          "type": "number"
-        },
-        {
-          "name": "Width",
-          "type": "number"
-        },
-        {
-          "name": "Number of Batteries",
-          "type": "number"
-        },
-        {
-          "name": "Weight",
-          "type": "number"
-        },
-        {
-          "name": "Drivetrain",
-          "type": "dropdown",
-          "options": [
-            "West Coast",
-            "Swerve",
-            "Butterfly",
-            "Mecanum",
-            "Tread",
-            "Tank",
-            "Other"
-          ]
-        },
-        {
-          "name": "Swerve Motor Type",
-          "type": "dropdown",
-          "options": [
-            "Neo",
-            "Falcon",
-            "Cim",
-            "Kraken",
-            "Other"
-          ]
-        },
-        {
-          "name": "Swerve Type",
-          "type": "dropdown",
-          "options": [
-            "No swerve",
-            "Mk 4",
-            "Mk 4i",
-            "Custom"
-          ]
-        },
-        {"name": "Speed",
-         "type": "dropdown",
-         "options": [
-            "Can't Move",
-            "Slow",
-            "Moderate",
-            "Fast",
-            "Other(type into textbox)"
-         ]
-        },
-        {"name": "Speed(exact)",
-         "type": "text"
-        }
-      ]
-    },
-
-
-
-    {
-      "name": "Match Play",
-      "widgets": [
-
-        {
-          "name": "Can Pick Up",
-          "type": "multicheckbox",
-          "colspan": 3,
-          "options": [
-            "Algae from Ground",
-            "Algae from reef",
-            "Coral from ground",
-            "Coral(Horizontal)"
-          ]
-        },
-        {
-          "name": "Can Score In",
-          "type": "multicheckbox",
-          "colspan" : 3,
-          "rowspan": 3,
-          "options": [
-            "Reef",
-            "Processer",
-            "Barge"
-          ]
-        },
-        {
-          "name": "Preferred Pickup Location",
-          "type": "dropdown",
-          "options": [
-            "Ground",
-            "Coral Station"
-          ],
-          "defaultOption": true
-        },
-        {
-          "name": "Preferred Scoring Location",
-          "type": "dropdown",
-          "options": [
-            "Reef",
-            "Processer",
-            "Barge"
-          ],
-          "defaultOption": true
-        },
-        {
-          "name": "Preferred Hanging Location",
-          "type": "dropdown",
-          "options": [
-            "Shallow",
-            "Deep"
-          ],
-          "defaultOption": true
-        },
-        {
-          "name": "Cycle Time Reef",
-          "type": "number"
-        },
-        {
-          "name": "Cycle Time Processer",
-          "type": "number"
-        },
-        {
-          "name": "Cycle Time Barge",
-          "type": "number"
-        },
-        {
-          "name": "How often can the human player score into barge(scale of 1-10)?",
-          "type": "spinbox",
-          "max": 10
-        }
-      ]
-    },
-
-    {
-      "name": "How good is it at...",
-      "widgets": [
-
-        {
-          "name": "Picking up Algae?",
-          "type":"radio",
-          "options": [
-            "1. Bad",
-            "2. Eh...",
-            "3. Average",
-            "4. Good",
-            "5. Excellent"
-          ]
-        },
-        {
-          "name": "Picking up Coral?",
-          "type":"radio",
-          "options": [
-            "1. Bad",
-            "2. Eh...",
-            "3. Average",
-            "4. Good",
-            "5. Excellent"
-          ]
-        },
-        {
-          "name": "Knocking Algae off the reef?",
-          "type":"radio",
-          "options": [
-            "1. Bad",
-            "2. Eh...",
-            "3. Average",
-            "4. Good",
-            "5. Excellent"
-          ]
-        },
-        {
-          "name": "Tossing Algae into the Barge?",
-          "type":"radio",
-          "options": [
-            "1. Bad",
-            "2. Eh...",
-            "3. Average",
-            "4. Good",
-            "5. Excellent"
-          ]
-        },
-        {
-          "name": "Hanging from a Shallow cage?",
-          "type":"radio",
-          "options": [
-            "1. Bad",
-            "2. Eh...",
-            "3. Average",
-            "4. Good",
-            "5. Excellent"
-          ]
-        },
-        {
-          "name": "Hanging from a Deep cage?",
-          "type":"radio",
-          "options": [
-            "1. Bad",
-            "2. Eh...",
-            "3. Average",
-            "4. Good",
-            "5. Excellent"
-          ]
-        },
-        {
-          "name": "Placing Coral into the Chute(very bottom of Reef)?",
-          "type":"radio",
-          "options": [
-            "1. Bad",
-            "2. Eh...",
-            "3. Average",
-            "4. Good",
-            "5. Excellent"
-          ]
-        },
-        {
-          "name": "Processing Algae?",
-          "type":"radio",
-          "options": [
-            "1. Bad",
-            "2. Eh...",
-            "3. Average",
-            "4. Good",
-            "5. Excellent"
-          ]
-        }
-      ]
-    },
-
-    {
-      "name": "Autonomous Performance",
-      "widgets":[
-        {
-          "name": "Does it have an Autonomous Phase?",
-          "type": "checkbox",
-          "colspan": 3,
-          "rowspan": 3
-        },
-        {
-          "name": "Can it move?",
-          "type": "checkbox",
-          "rowspan": 3
-        },
-        {
-          "name": "Auton Coral Scoring In Trough(L1)?",
-          "type":"dropdown",
-          "options": [
-            "0. Can't",
-            "1. Rarley",
-            "2. Sometimes",
-            "3. Half of the Time",
-            "4. Often",
-            "5. 95%-100%"
-          ]
-        },
-        {
-          "name": "Auton Coral Scoring In Branch(L2)?",
-          "type":"dropdown",
-          "options": [
-            "0. Can't",
-            "1. Rarley",
-            "2. Sometimes",
-            "3. Half of the Time",
-            "4. Often",
-            "5. 95%-100%"
-          ]
-        },
-        {
-          "name": "Auton Coral Scoring In Branch(L3)?",
-          "type":"dropdown",
-          "options": [
-            "0. Can't",
-            "1. Rarley",
-            "2. Sometimes",
-            "3. Half of the Time",
-            "4. Often",
-            "5. 95%-100%"
-          ]
-        },
-        {
-          "name": "Auton Coral Scoring In Branch(L4)?",
-          "type":"dropdown",
-          "options": [
-            "0. Can't",
-            "1. Rarley",
-            "2. Sometimes",
-            "3. Half of the Time",
-            "4. Often",
-            "5. 95%-100%"
-          ]
-        },
-        {
-          "name": "Auton Processing of Algae?",
-          "type":"dropdown",
-          "options": [
-            "0. Can't",
-            "1. Rarley",
-            "2. Sometimes",
-            "3. Half of the Time",
-            "4. Often",
-            "5. 95%-100%"
-          ]
-        },
-        {
-          "name": "Auton Throwing Algae into Barge?",
-          "type":"dropdown",
-          "options": [
-            "0. Can't",
-            "1. Rarley",
-            "2. Sometimes",
-            "3. Half of the Time",
-            "4. Often",
-            "5. 95%-100%"
-          ]
-        }
-      ]
-    },
-
-
-    {
-      "name": "Final Thoughts",
-      "widgets": [
-
-        {
-          "name": "Rating(1-10)",
-          "type": "spinbox",
-          "max": 10
-        },
-        {
-          "name": "Commentss",
-          "type": "textarea",
-          "colspan": 3
-        }
-      ]
-
-    }
-
-
-  ]
-}
