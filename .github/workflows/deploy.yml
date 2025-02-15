@@ -47,14 +47,14 @@ jobs:
 
   # Deployment job
   deploy:
-    needs: build
+   needs: build
 
-  environment:
+   environment:
     name: github-pages
     url: ${{ steps.deployment.outputs.page_url }}
 
-  runs-on: unbuntu-latest
-  steps:
+   runs-on: unbuntu-latest
+   steps:
       - uses: ./.github/workflows/deploy.yml
       - name: Deploy to GitHub Pages
         id: deployment
