@@ -53,6 +53,6 @@ jobs:
     needs: build
 
     name: Deploy to GitHub Pages
-    uses: ./.github/workflows/deploy.yml@v3
+    uses: ./.github/workflows/deploy-pages@v3
     id: deployment
 
