@@ -54,7 +54,7 @@ jobs:
     url: ${{ steps.deployment.outputs.page_url }}
 
   runs-on: unbuntu-latest
-   steps:
+  steps:
       - uses: ./.github/workflows/deploy.yml
       - name: Deploy to GitHub Pages
         id: deployment
