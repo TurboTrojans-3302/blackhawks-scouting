@@ -12,7 +12,11 @@ on:
   workflow_dispatch:
     branches: [ "main", "2025Update" ]
 
-
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 # Allow one concurrent deployment
 concurrency:
@@ -42,22 +46,14 @@ jobs:
         path: ./dist
 
   # Deployment job
-      deploy:
+    deploy:
           needs: build
 
-        # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-      permissions:
-        contents: read
-        pages: write
-        id-token: write
-
-        
-        environment:
+          environment:
            name: github-pages
            url: ${{ steps.deployment.outputs.page_url }}
-       
-        runs-on: unbuntu-latest
-        steps:
+          runs-on: unbuntu-latest
+          steps:
           - name: Deploy to GitHub Pages
           id: deployment
           uses: actions/deploy-pages@v3
