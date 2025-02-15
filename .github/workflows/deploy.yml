@@ -46,7 +46,7 @@ jobs:
         path: ./dist
 
   # Deployment job
-    deploy:
+     deploy:
           needs: build
 
           environment:
