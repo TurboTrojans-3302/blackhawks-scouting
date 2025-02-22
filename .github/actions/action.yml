@@ -15,6 +15,8 @@ runs:
   steps:
     - run: cd ${{ github.action_path }}
       shell: bash
+    - run: ${{ github.action_path }}/src/internal/api-client.js
+      shell: bash
 #  pre: lib/pre.js
 #  pre-if: 'runner.os == linux'
 #  post: lib/post.js
