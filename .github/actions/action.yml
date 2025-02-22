@@ -11,8 +11,11 @@ author: Moosterbox
 #    description: action result
 
 runs:
-  using: 'node20'
-  main: 'vite.config.js'
+  using: "composite"
+  steps:
+    - run: cd ${{ github.action_path }}
+      shell: bash
+    - run:
 #  pre: lib/pre.js
 #  pre-if: 'runner.os == linux'
 #  post: lib/post.js
