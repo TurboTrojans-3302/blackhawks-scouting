@@ -57,11 +57,8 @@ jobs:
    steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      - name: Copy files
-        working-directory: ${{ env.WORK_DIR }}/deploy.yml
-        run: cp -r .github "$GITHUB_WORKSPACE/"
       - name: Use local deploy.yml
-        uses: ${{ env.WORK_DIR }}/./.github/workflows/deploy.yml
+        uses: ./.github/workflows/deploy.yml
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
