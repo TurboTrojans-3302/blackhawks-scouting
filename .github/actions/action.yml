@@ -12,7 +12,7 @@ author: Moosterbox
 
 runs:
   using: 'node20'
-  main: 'main.js'
+  main: 'vite.config.js'
 #  pre: lib/pre.js
 #  pre-if: 'runner.os == linux'
 #  post: lib/post.js
