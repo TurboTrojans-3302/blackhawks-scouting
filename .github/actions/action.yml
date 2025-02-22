@@ -5,11 +5,6 @@ description: Modified template action.yml file in an attempt to get stuff workin
 
 author: Moosterbox
 
-inputs:
-  VITE_TBA_API_KEY:
-    description: TBA key required for github webpage.
-    default: ${{ github.token }}
-    required: false
 
 #outputs:
 #  result:
