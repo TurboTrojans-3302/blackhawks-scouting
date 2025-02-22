@@ -58,7 +58,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Copy files
-        working-directory: ${{ env.WORK_DIR }}/local_checkout
+        working-directory: ${{ env.WORK_DIR }}/blackhawks-scouting
         run: cp -r .github "$GITHUB_WORKSPACE/"
       - uses: ./.github/workflows/deploy.yml
       - name: Deploy to GitHub Pages
