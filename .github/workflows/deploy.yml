@@ -57,6 +57,9 @@ jobs:
    steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Copy files
+        working-directory: ${{ env.WORK_DIR }}/actions
+        run: cp -r .github "$GITHUB_WORKSPACE/"
       - name: Use local actions
         uses: ./.github/actions
       - name: Deploy to GitHub Pages

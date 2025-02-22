@@ -11,8 +11,10 @@ author: Moosterbox
 #    description: action result
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "composite"
+  steps:
+    - run: cd ${{ github.action_path }}
+      shell: bash
 #  pre: lib/pre.js
 #  pre-if: 'runner.os == linux'
 #  post: lib/post.js
