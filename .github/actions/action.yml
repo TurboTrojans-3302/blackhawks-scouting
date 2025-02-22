@@ -10,12 +10,6 @@ author: Moosterbox
 #  result:
 #    description: action result
 
-branding:
-   https://turbotrojans-3302.github.io/blackhawks-scouting/
-  # e.g. https://haya14busa.github.io/github-action-brandings/
-  icon: 'package'
-  color: 'orange'
-
 runs:
   using: 'node20'
   main: 'main.js'
