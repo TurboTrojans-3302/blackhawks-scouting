@@ -55,11 +55,13 @@ jobs:
 
    runs-on: ubuntu-latest
    steps:
-      - uses: ./.github/workflows/deploy.yml
+      - name: Check out repository
       - uses: actions/checkout@v4
+        path: ${{ env.WORK_DIR }}/local_checkout
       - name: Copy files
         working-directory: ${{ env.WORK_DIR }}/local_checkout
         run: cp -r .github "$GITHUB_WORKSPACE/"
+      - uses: ./.github/workflows/deploy.yml
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
