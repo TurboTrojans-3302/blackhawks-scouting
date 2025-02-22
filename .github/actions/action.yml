@@ -6,8 +6,8 @@ description: Modified template action.yml file in an attempt to get stuff workin
 author: Moosterbox
 
 inputs:
-  GITHUB_TOKEN:
-    description: Secret GitHub API token to use for making API requests.
+  VITE_TBA_API_KEY:
+    description: TBA key required for github webpage.
     default: ${{ github.token }}
     required: false
 
@@ -22,8 +22,8 @@ branding:
   color: 'orange'
 
 runs:
-  using: node20
-  main: lib/main.js
+  using: 'node20'
+  main: 'main.js'
 #  pre: lib/pre.js
 #  pre-if: 'runner.os == linux'
 #  post: lib/post.js
