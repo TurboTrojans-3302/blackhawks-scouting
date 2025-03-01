@@ -34,6 +34,8 @@ jobs:
     - run: npm run build -- --base=/${{ github.event.repository.name }}/
     - name: Remove symlinks (if any)
       run: find ./dist -type l -exec rm -f {} +
+    - name: Configure Github pages
+      uses: actions/configure-pages@v4
     - name: Upload artifact
       id: deployment
       uses: actions/upload-pages-artifact@v3
