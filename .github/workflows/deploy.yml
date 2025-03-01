@@ -31,7 +31,6 @@ jobs:
         node-version: "20"
         cache: "npm"
     - run: npm ci
-    - run:  $ npm audit fix -- force
     - run: npm run build -- --base=/${{ github.event.repository.name }}/
     - name: Remove symlinks (if any)
       run: find ./dist -type l -exec rm -f {} +
@@ -62,4 +61,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
