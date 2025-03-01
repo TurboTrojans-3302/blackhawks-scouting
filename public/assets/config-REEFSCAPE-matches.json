@@ -167,8 +167,10 @@
           "align": "center"
         },
         {
-          "type": "picture",
+          "name": "Final positions",
+          "type": "positions",
           "file": "2025_REEFSCAPE_Transparent_Background.png",
+          "selectRadius": 10,
           "colspan": 2,
           "height": 250
         }
