@@ -9,6 +9,7 @@
       </select>
       <button @click="deleteData">Delete</button>
       <button @click="downloadData">Download</button>
+      <button @click="uploadToDrive" >Upload To Drive</button>
       <button @click="clearData">Clear All</button>
     </template>
   </div>
@@ -59,6 +60,17 @@ function downloadData() {
   // If there are no records selected, they will all be included in the generated file
   downloadLink.href = widgets.makeDownloadLink({ header: selectedEntry.header, values: filterRecords(true) });
   downloadLink.click();
+}
+
+// uploads CSV files to Google Drive(does nothing for now, sorry!)
+// link to example: https://developers.google.com/drive/api/guides/folder#node.js
+// link to stackoverflow question: https://stackoverflow.com/questions/51584732/create-folder-and-upload-file-to-google-drive-from-typescript-cannot-compile
+function uploadToDrive(){
+  /*
+  const{GoogleAuth} = require('google-auth-library');
+  const{google} = require('googleapis')
+  */
+
 }
 
 function clearData() {
