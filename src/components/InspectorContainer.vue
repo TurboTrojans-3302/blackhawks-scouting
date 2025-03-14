@@ -65,7 +65,7 @@ function downloadData() {
 // uploads CSV files to Google Drive(does nothing for now, sorry!)
 // link to example: https://developers.google.com/drive/api/guides/folder#node.js
 // link to stackoverflow question: https://stackoverflow.com/questions/51584732/create-folder-and-upload-file-to-google-drive-from-typescript-cannot-compile
-async function uploadToDrive(folderId){
+async function uploadToDrive(folderId: string){
   const fs = require('fs');
   const{GoogleAuth} = require('google-auth-library');
   const{google} = require('googleapis')
@@ -76,7 +76,7 @@ async function uploadToDrive(folderId){
   const service = google.drive({version: 'v3', auth});
 
   //set folderId and upload csv(TODO: find folder id)
-  folderId = 'Idkman123';
+  folderId = '1HyC6zKH98n0OzDhmhKWJkupdxY-Knd1k';
 
 }
 
