@@ -21,12 +21,13 @@
 </template>
 
 <script setup lang="ts">
+import { Name } from "ajv";
 import InspectorTable from "./InspectorTable.vue";
 import { useWidgetsStore } from "@/common/stores";
 
 const widgets = useWidgetsStore();
 let selectedIdx = $ref(0); // The index of the entry selected in the combobox
-
+var folderId = 'temp';
 const downloadLink = $ref<HTMLAnchorElement>();
 const selectedRecords = $ref(new Set<number>());
 const hasSelectedRecords = $computed(() => selectedRecords.size > 0);
@@ -65,7 +66,8 @@ function downloadData() {
 // uploads CSV files to Google Drive(does nothing for now, sorry!)
 // link to example: https://developers.google.com/drive/api/guides/folder#node.js
 // link to stackoverflow question: https://stackoverflow.com/questions/51584732/create-folder-and-upload-file-to-google-drive-from-typescript-cannot-compile
-async function uploadToDrive(folderId: string){
+async function uploadToDrive(){
+
   const fs = require('fs');
   const{GoogleAuth} = require('google-auth-library');
   const{google} = require('googleapis')
@@ -75,8 +77,36 @@ async function uploadToDrive(folderId: string){
   const auth = new GoogleAuth({scopes: 'https://www.googleapis.com/auth/drive',});
   const service = google.drive({version: 'v3', auth});
 
-  //set folderId and upload csv(TODO: find folder id)
+  //set folderId and upload csv
   folderId = '1HyC6zKH98n0OzDhmhKWJkupdxY-Knd1k';
+
+  // copied code from downladData finction
+  if (selectedEntry === undefined) return;
+  if (downloadLink === undefined) return; // Make sure the link exists
+  downloadLink.href = widgets.makeDownloadLink({ header: selectedEntry.header, values: filterRecords(true) });
+
+  const fileMetadata = {
+    Name: downloadLink.href,
+    parents: [folderId]
+  };
+
+  const media = {
+    mimeType: 'document/csv',
+    body: fs.createReadStream(`files/${Name}`),
+  };
+
+  try {
+    const file = await service.files.create({
+      requestBody: fileMetadata,
+      media: media,
+      fields: 'id',
+    });
+    console.log('File Id:', file.data.id);
+    return file.data.id;
+  } catch (err) {
+    // TODO(developer) - Handle error
+    throw err;
+  }
 
 }
 
