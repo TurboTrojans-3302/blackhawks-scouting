@@ -8,6 +8,7 @@ import postcssPresetEnv from "postcss-preset-env";
 import ReactivityTransform from "@vue-macros/reactivity-transform/vite";
 import { VitePWA } from "vite-plugin-pwa";
 import vue from "@vitejs/plugin-vue";
+import { nodePolyfills } from 'vite-plugin-node-polyfills';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,6 +23,7 @@ export default defineConfig({
   plugins: [
     ReactivityTransform(),
     vue(),
+    nodePolyfills(),
     VitePWA({
       includeAssets: ["assets/*", "icons/*"],
       manifest: {

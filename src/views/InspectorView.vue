@@ -2,6 +2,7 @@
   <div id="inspector-container">
     <InspectorContainer />
   </div>
+
 </template>
 
 <script setup lang="ts">

@@ -9,7 +9,14 @@
       </select>
       <button @click="deleteData">Delete</button>
       <button @click="downloadData">Download</button>
-      <button @click="uploadToDrive" >Upload To Drive</button>
+      <button @click="uploadToDrive" >Upload To Drive
+        <div id="g_id_onload"
+          data-client_id="344124639348-l0ld2jh9h6no4ja3mpei30j6b9nn6o8h.apps.googleusercontent.com"
+          data-login_uri="https://turbotrojans-3302.github.io"
+          data-your_own_param_1_to_login="5"
+          data-your_own_param_2_to_login="5">
+        </div>
+      </button>
       <button @click="clearData">Clear All</button>
     </template>
   </div>
@@ -24,10 +31,13 @@
 import { Name } from "ajv";
 import InspectorTable from "./InspectorTable.vue";
 import { useWidgetsStore } from "@/common/stores";
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+
 
 const widgets = useWidgetsStore();
 let selectedIdx = $ref(0); // The index of the entry selected in the combobox
-var folderId = 'temp';
+let folderId = "temp";
 const downloadLink = $ref<HTMLAnchorElement>();
 const selectedRecords = $ref(new Set<number>());
 const hasSelectedRecords = $computed(() => selectedRecords.size > 0);
@@ -66,19 +76,20 @@ function downloadData() {
 // uploads CSV files to Google Drive(does nothing for now, sorry!)
 // link to example: https://developers.google.com/drive/api/guides/folder#node.js
 // link to stackoverflow question: https://stackoverflow.com/questions/51584732/create-folder-and-upload-file-to-google-drive-from-typescript-cannot-compile
+// link to node.js blog: https://nodejs.org/en/blog/announcements/v22-release-announce
 async function uploadToDrive(){
 
-  const fs = require('fs');
-  const{GoogleAuth} = require('google-auth-library');
-  const{google} = require('googleapis')
+  const fs = require("fs");
+  const{GoogleAuth} = require("google-auth-library");
+  const{google} = require("googleapis")
 
   // get credentials and build service
   // get proper auth mechanism?(not sure what that means, look up later)
-  const auth = new GoogleAuth({scopes: 'https://www.googleapis.com/auth/drive',});
-  const service = google.drive({version: 'v3', auth});
+  const auth = new GoogleAuth({scopes: "https://www.googleapis.com/auth/drive",});
+  const service = google.drive({version: "v3", auth});
 
   //set folderId and upload csv
-  folderId = '1HyC6zKH98n0OzDhmhKWJkupdxY-Knd1k';
+  folderId = "1HyC6zKH98n0OzDhmhKWJkupdxY-Knd1k";
 
   // copied code from downladData finction
   if (selectedEntry === undefined) return;
@@ -91,7 +102,7 @@ async function uploadToDrive(){
   };
 
   const media = {
-    mimeType: 'document/csv',
+    mimeType: "text/csv",
     body: fs.createReadStream(`files/${Name}`),
   };
 
@@ -99,9 +110,9 @@ async function uploadToDrive(){
     const file = await service.files.create({
       requestBody: fileMetadata,
       media: media,
-      fields: 'id',
+      fields: "id",
     });
-    console.log('File Id:', file.data.id);
+    console.log("File Id:", file.data.id);
     return file.data.id;
   } catch (err) {
     // TODO(developer) - Handle error
