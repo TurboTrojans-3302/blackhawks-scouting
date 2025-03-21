@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
+    "serve": "vite preview --experimental-require-module",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore --fix src",
     "installModules": "npm install",
     "generateSchema": "json2ts src/common/config.schema.json src/config.d.ts"

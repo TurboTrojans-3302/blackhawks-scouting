@@ -31,8 +31,9 @@
 import { Name } from "ajv";
 import InspectorTable from "./InspectorTable.vue";
 import { useWidgetsStore } from "@/common/stores";
-import { createRequire } from "node:module";
-const require = createRequire(import.meta.url);
+import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
+
 
 
 const widgets = useWidgetsStore();
