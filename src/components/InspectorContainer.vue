@@ -31,14 +31,13 @@
 import { Name } from "ajv";
 import InspectorTable from "./InspectorTable.vue";
 import { useWidgetsStore } from "@/common/stores";
-import { createRequire } from 'module';
 // const require = createRequire(import.meta.url);
 
 
 
 const widgets = useWidgetsStore();
 let selectedIdx = $ref(0); // The index of the entry selected in the combobox
-let folderId = "temp";
+let folderId = "";
 const downloadLink = $ref<HTMLAnchorElement>();
 const selectedRecords = $ref(new Set<number>());
 const hasSelectedRecords = $computed(() => selectedRecords.size > 0);
@@ -80,9 +79,9 @@ function downloadData() {
 // link to node.js blog: https://nodejs.org/en/blog/announcements/v22-release-announce
 async function uploadToDrive(){
 
-  const fs = require("fs");
-  const{GoogleAuth} = require("google-auth-library");
-  const{google} = require("googleapis")
+  const fs = await import("fs");
+  const{GoogleAuth} = await import("google-auth-library");
+  const{google} = await import("googleapis")
 
   // get credentials and build service
   // get proper auth mechanism?(not sure what that means, look up later)
