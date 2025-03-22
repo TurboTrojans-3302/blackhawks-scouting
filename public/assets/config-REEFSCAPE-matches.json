@@ -104,7 +104,7 @@
           "name": "Algae Scored",
           "type": "heading",
           "colspan": 2,
-          "col": 2,
+          "col": 3,
           "align": "center",
           "row" : 2
         },
@@ -115,7 +115,7 @@
         {
           "name": "Processer",
           "type": "spinbox",
-          "labelColspan": 1,
+          "labelColspan": 2,
           "max": 3,
           "row": 3,
           "col": 2
@@ -123,7 +123,7 @@
         {
           "name": "Barge",
           "type": "spinbox",
-          "col": 2,
+          "col": 3,
           "row": 4
         },
         {
@@ -157,7 +157,7 @@
           "type": "checkbox"
         },
         {
-          "name": "Mechanical Failures",
+          "name": "Mechanical Failures/ Other comments",
           "type": "text"
         },
         {
