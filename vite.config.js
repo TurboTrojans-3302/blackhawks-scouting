@@ -18,7 +18,9 @@ export default defineConfig({
     }
   },
   define: {
-    APP_VERSION: JSON.stringify(process.env.npm_package_version)
+    APP_VERSION: JSON.stringify(process.env.npm_package_version),
+
+    
   },
   plugins: [
     ReactivityTransform(),

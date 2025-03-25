@@ -9,7 +9,7 @@
       </select>
       <button @click="deleteData">Delete</button>
       <button @click="downloadData">Download</button>
-      <button @click="uploadToDrive" >Upload To Drive
+      <button @click="dummyupload" >Upload To Drive
         <div id="g_id_onload"
           data-client_id="344124639348-l0ld2jh9h6no4ja3mpei30j6b9nn6o8h.apps.googleusercontent.com"
           data-login_uri="https://turbotrojans-3302.github.io"
@@ -28,16 +28,18 @@
 </template>
 
 <script setup lang="ts">
-import { Name } from "ajv";
 import InspectorTable from "./InspectorTable.vue";
 import { useWidgetsStore } from "@/common/stores";
-// const require = createRequire(import.meta.url);
+import fs from "node:fs";
+
+
+
 
 
 
 const widgets = useWidgetsStore();
 let selectedIdx = $ref(0); // The index of the entry selected in the combobox
-let folderId = "";
+const folderId = "1HyC6zKH98n0OzDhmhKWJkupdxY-Knd1k";
 const downloadLink = $ref<HTMLAnchorElement>();
 const selectedRecords = $ref(new Set<number>());
 const hasSelectedRecords = $computed(() => selectedRecords.size > 0);
@@ -73,19 +75,23 @@ function downloadData() {
   downloadLink.click();
 }
 
+
+function dummyupload(){
+  uploadToDrive(folderId);
+}
 // uploads CSV files to Google Drive(does nothing for now, sorry!)
 // link to example: https://developers.google.com/drive/api/guides/folder#node.js
 // link to stackoverflow question: https://stackoverflow.com/questions/51584732/create-folder-and-upload-file-to-google-drive-from-typescript-cannot-compile
 // link to node.js blog: https://nodejs.org/en/blog/announcements/v22-release-announce
-async function uploadToDrive(){
+async function uploadToDrive(folderId){
 
-  const fs = await import("fs");
-  const{GoogleAuth} = await import("google-auth-library");
-  const{google} = await import("googleapis")
+ console.log("messing up here?");
+  const{GoogleAuth} = await import('google-auth-library');
+ const{google} = await import("googleapis")
 
   // get credentials and build service
   // get proper auth mechanism?(not sure what that means, look up later)
-  const auth = new GoogleAuth({scopes: "https://www.googleapis.com/auth/drive",});
+  const auth = new GoogleAuth({scopes: "https://www.googleapis.com/auth/drive.file"});
   const service = google.drive({version: "v3", auth});
 
   //set folderId and upload csv
@@ -97,13 +103,13 @@ async function uploadToDrive(){
   downloadLink.href = widgets.makeDownloadLink({ header: selectedEntry.header, values: filterRecords(true) });
 
   const fileMetadata = {
-    Name: downloadLink.href,
+    Name: selectedEntry.header,
     parents: [folderId]
   };
 
   const media = {
     mimeType: "text/csv",
-    body: fs.createReadStream(`files/${Name}`),
+    body: fs.createReadStream(`files/${downloadLink.href}`),
   };
 
   try {
