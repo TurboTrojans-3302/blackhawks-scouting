@@ -25,7 +25,7 @@
       "name": "Autonomous",
       "widgets": [
         {
-          "name": "Pre-Loaded Coral",
+          "name": "Pre-Loaded Fuel",
           "type": "checkbox"
         },
         {
@@ -33,45 +33,17 @@
           "type": "checkbox"
         },
         {
-          "name": "Auto RP",
-          "type":"checkbox"
-        },
-        {
           "type": "spacer",
           "height": 20
         },
         {
-          "name": "Trough(L1) Coral Scored",
+          "name": "Hub Fuel Scored",
           "type": "spinbox",
           "prefix": "Auto"
         },
         {
-          "name": "L2 Branch Coral Placed",
-          "type": "spinbox",
-          "max": 6,
-          "prefix": "Auto"
-        },
-        {
-          "name": "L3 Branch Coral Placed",
-          "type": "spinbox",
-          "max": 6,
-          "prefix": "Auto"
-        },
-        {
-          "name": "L4 Branch Coral Placed",
-          "type": "spinbox",
-          "max": 6,
-          "prefix": "Auto"
-        },
-        {
-          "name": "Algae Scored in Processer",
-          "type": "spinbox",
-          "prefix": "Auto"
-        },
-        {
-          "name": "Algae Scored in Net",
-          "type": "spinbox",
-          "prefix": "Auto"
+          "name": "Climbed during Auton",
+          "type": "checkbox"
         }
       ]
     },
@@ -79,56 +51,18 @@
       "name": "Teleop",
       "widgets": [
         {
-          "name": "Coral Picked up",
-          "type": "spinbox"
-        },
-        {
-          "name": "Coral Scored",
-          "type": "heading",
-          "colspan": 2,
-          "col": 2
-        },
-        {
-          "name": "L2 Branch",
-          "type": "spinbox"
-        },
-        {
-          "name": "L3 Branch",
-          "type": "spinbox"
-        },
-        {
-          "name": "L4 Branch",
-          "type": "spinbox"
-        },
-        {
-          "name": "Algae Scored",
-          "type": "heading",
-          "colspan": 2,
-          "col": 3,
-          "align": "center",
-          "row" : 2
-        },
-        {
-          "type": "spacer",
-          "width": 5
-        },
-        {
-          "name": "Processer",
+          "name": "Fuel Scoring Consistency(1-10)",
           "type": "spinbox",
-          "labelColspan": 2,
-          "max": 3,
-          "row": 3,
-          "col": 2
+          "max": 10
         },
         {
-          "name": "Barge",
+          "name": "Fuel Collection Grade(1-10)",
           "type": "spinbox",
-          "col": 3,
-          "row": 4
+          "max": 10
         },
         {
-          "type": "spacer",
-          "height": 20
+          "name": "Human Player Fuel Scored",
+          "type": "spinbox"
         }
       ]
     },
@@ -136,25 +70,26 @@
       "name": "Endgame",
       "widgets": [
         {
-          "name": "CO-OP Bonus",
+          "name": "Energized RP",
           "type": "checkbox"
         },
         {
-          "name": "Coral RP",
+          "name": "Supercharged RP",
           "type": "checkbox"
         },
         {
-          "name": "Cage Climbed",
+          "name": "TRAVERSAL RP",
+          "type": "checkbox"
+        },
+        {
+          "name": "TOWER Level Climbed",
           "type": "dropdown",
           "options": [
-            "Shallow",
-            "Deep",
-            "None"
+            "Level 1",
+            "Level 2",
+            "Level 3",
+            "N/A"
           ]
-        },
-        {
-          "name":"Barge RP",
-          "type": "checkbox"
         },
         {
           "name": "Mechanical Failures/ Other comments",
