@@ -1,5 +1,5 @@
 {
-  "heading": "REEFSCAPE - 2025(MATCH SCOUTING)",
+  "heading": "REBUILT - 2026(MATCH SCOUTING)",
   "logo": "test_scouting_logo.png",
   "pages": [
     {
@@ -16,7 +16,7 @@
         {
           "name": "Starting Position",
           "type": "positions",
-          "file": "2025_REEFSCAPE_Transparent_Background.png",
+          "file": "REBUILT_2026_Stage.jpg",
           "selectRadius": 10
         }
       ]
@@ -34,13 +34,17 @@
           "type": "checkbox"
         },
         {
-          "type": "spacer",
-          "height": 20
+          "name": "Post-Buzzer",
+          "type": "heading"
+        },
+        {
+          "name": "Fuel Collected during Auton",
+          "type": "spinbox"
+
         },
         {
           "name": "Hub Fuel Scored",
-          "type": "spinbox",
-          "prefix": "Auto"
+          "type": "spinbox"
         },
         {
           "name": "Climbed during Auton",
@@ -52,17 +56,59 @@
       "name": "Teleop",
       "widgets": [
         {
-          "name": "Fuel Scoring Consistency(1-10)",
+          "name": "Shift 1",
+          "type": "heading"
+        },
+        {
+          "name": "Robot Fuel Scored - Shift 1",
+          "type": "spinbox"
+
+        },
+        {
+          "name": "Fuel Collection Grade - Shift 1(1-10)",
           "type": "spinbox",
           "max": 10
         },
         {
-          "name": "Fuel Collection Grade(1-10)",
+          "name": "Human Player Fuel Scored - Shift 1",
+          "type": "spinbox"
+        },
+
+        {
+          "name": "Shift 2",
+          "type": "heading"
+        },
+        {
+          "name": "Robot Fuel Scored - Shift 2",
+          "type": "spinbox"
+
+        },
+        {
+          "name": "Fuel Collection Grade - Shift 2(1-10)",
           "type": "spinbox",
           "max": 10
         },
         {
-          "name": "Human Player Fuel Scored",
+          "name": "Human Player Fuel Scored - Shift 2",
+          "type": "spinbox"
+        },
+
+        {
+          "name": "Shift 3",
+          "type": "heading"
+        },
+        {
+          "name": "Robot Fuel Scored - Shift 3",
+          "type": "spinbox"
+
+        },
+        {
+          "name": "Fuel Collection Grade - Shift 3(1-10)",
+          "type": "spinbox",
+          "max": 10
+        },
+        {
+          "name": "Human Player Fuel Scored - Shift 3",
           "type": "spinbox"
         }
       ]
@@ -71,15 +117,15 @@
       "name": "Endgame",
       "widgets": [
         {
-          "name": "Energized RP",
+          "name": "Energized RP(HUB Score > 100)",
           "type": "checkbox"
         },
         {
-          "name": "Supercharged RP",
+          "name": "Supercharged RP(HUB Score > 360)",
           "type": "checkbox"
         },
         {
-          "name": "TRAVERSAL RP",
+          "name": "TRAVERSAL RP(TOWER Score > 50)",
           "type": "checkbox"
         },
         {
@@ -97,6 +143,10 @@
           "type": "text"
         },
         {
+          "name": "Final Rating(1-10)",
+          "type": "spinbox"
+        },
+        {
           "name": "Stage Positions",
           "type": "heading",
           "colspan": 2,
@@ -105,7 +155,7 @@
         {
           "name": "Final positions",
           "type": "positions",
-          "file": "2025_REEFSCAPE_Transparent_Background.png",
+          "file": "REBUILT_2026_Stage.jpg",
           "selectRadius": 10,
           "colspan": 2,
           "height": 250
