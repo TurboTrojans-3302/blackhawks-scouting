@@ -74,18 +74,8 @@
     },
 
     {
-      "name": "Robot Collection and Climbing Mechanisms",
+      "name": "Robot Fuel Capacity and Climbing Mechanisms",
       "widgets": [
-        {
-          "name": "Fuel Collection Mechanism",
-          "type": "radio",
-          "options": [
-            "Feeds From Ground",
-            "Relies on Outpost",
-            "Other",
-            "None"
-          ]
-        },
         {
           "name": "Climbing Mechanism",
           "type": "radio",
