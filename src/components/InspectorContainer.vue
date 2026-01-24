@@ -80,12 +80,19 @@ function dummyupload(){
   uploadToDrive(folderId);
 }
 // uploads CSV files to Google Drive(does nothing for now, sorry!)
+// Abandonded until further notice
 // link to example: https://developers.google.com/drive/api/guides/folder#node.js
 // link to stackoverflow question: https://stackoverflow.com/questions/51584732/create-folder-and-upload-file-to-google-drive-from-typescript-cannot-compile
 // link to node.js blog: https://nodejs.org/en/blog/announcements/v22-release-announce
 async function uploadToDrive(folderId){
 
  console.log("messing up here?");
+
+ if (selectedEntry === undefined) return;
+  if (downloadLink === undefined) return; // Make sure the link exists
+  downloadLink.href = widgets.makeDownloadLink({ header: selectedEntry.header, values: filterRecords(true) });
+
+
   const{GoogleAuth} = await import('google-auth-library');
  const{google} = await import("googleapis")
 
@@ -98,9 +105,7 @@ async function uploadToDrive(folderId){
   folderId = "1HyC6zKH98n0OzDhmhKWJkupdxY-Knd1k";
 
   // copied code from downladData finction
-  if (selectedEntry === undefined) return;
-  if (downloadLink === undefined) return; // Make sure the link exists
-  downloadLink.href = widgets.makeDownloadLink({ header: selectedEntry.header, values: filterRecords(true) });
+
 
   const fileMetadata = {
     Name: selectedEntry.header,
