@@ -26,7 +26,8 @@
       "widgets": [
         {
           "name": "Pre-Loaded Fuel",
-          "type": "checkbox"
+          "type": "spinbox",
+          "max": 8
         },
         {
           "name": "Left Starting Zone",

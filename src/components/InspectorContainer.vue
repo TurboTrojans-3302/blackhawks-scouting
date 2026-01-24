@@ -84,6 +84,7 @@ function dummyupload(){
 // link to example: https://developers.google.com/drive/api/guides/folder#node.js
 // link to stackoverflow question: https://stackoverflow.com/questions/51584732/create-folder-and-upload-file-to-google-drive-from-typescript-cannot-compile
 // link to node.js blog: https://nodejs.org/en/blog/announcements/v22-release-announce
+/*
 async function uploadToDrive(folderId){
 
  console.log("messing up here?");
@@ -131,7 +132,7 @@ async function uploadToDrive(folderId){
   }
 
 }
-
+*/
 function clearData() {
   if (!confirm("Clear all saved entries in local storage permanently?")) return;
 
