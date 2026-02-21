@@ -56,61 +56,24 @@
       "name": "Teleop",
       "widgets": [
         {
-          "name": "Shift 1",
+          "name": "All Shifts",
           "type": "heading"
         },
         {
-          "name": "Robot Fuel Scored - Shift 1",
+          "name": "Robot Fuel Scored ",
           "type": "spinbox"
 
         },
         {
-          "name": "Fuel Collection Grade - Shift 1(1-10)",
-          "type": "spinbox",
-          "max": 10
-        },
-        {
-          "name": "Human Player Fuel Scored - Shift 1",
+          "name": "Fuel Collected",
           "type": "spinbox"
         },
-
         {
-          "name": "Shift 2",
-          "type": "heading"
-        },
-        {
-          "name": "Robot Fuel Scored - Shift 2",
-          "type": "spinbox"
-
-        },
-        {
-          "name": "Fuel Collection Grade - Shift 2(1-10)",
-          "type": "spinbox",
-          "max": 10
-        },
-        {
-          "name": "Human Player Fuel Scored - Shift 2",
-          "type": "spinbox"
-        },
-
-        {
-          "name": "Shift 3",
-          "type": "heading"
-        },
-        {
-          "name": "Robot Fuel Scored - Shift 3",
-          "type": "spinbox"
-
-        },
-        {
-          "name": "Fuel Collection Grade - Shift 3(1-10)",
-          "type": "spinbox",
-          "max": 10
-        },
-        {
-          "name": "Human Player Fuel Scored - Shift 3",
+          "name": "Human Player Fuel Scored",
           "type": "spinbox"
         }
+
+
       ]
     },
     {
