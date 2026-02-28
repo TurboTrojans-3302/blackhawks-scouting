@@ -18,7 +18,6 @@
   </div>
   <a :hidden="true" :download="entries[selectedIdx]" ref="downloadLink"></a>
 </template>
-
 <script setup lang="ts">
 import InspectorTable from "./InspectorTable.vue";
 import { useWidgetsStore } from "@/common/stores";
@@ -32,6 +31,7 @@ import fs from "node:fs";
 const widgets = useWidgetsStore();
 let selectedIdx = $ref(0); // The index of the entry selected in the combobox
 const downloadLink = $ref<HTMLAnchorElement>();
+let appendLink = "data:../scouting_files/ScoutingData/pits_T2.csv;charset=utf8"; // make a C# program instead?
 const selectedRecords = $ref(new Set<number>());
 const hasSelectedRecords = $computed(() => selectedRecords.size > 0);
 
@@ -74,6 +74,7 @@ function clearData() {
   widgets.savedData.clear();
   selectedIdx = 0; // Reset selected index
 }
+
 </script>
 
 <style>
