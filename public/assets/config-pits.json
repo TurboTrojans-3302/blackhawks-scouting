@@ -124,7 +124,8 @@
           "options": [
             "Level 1",
             "Level 2",
-            "Level 3"
+            "Level 3",
+            "N/A"
           ]
         },
         {
@@ -159,6 +160,7 @@
           "name": "Collecting Fuel from the OUTPOST?",
           "type":"dropdown",
           "options": [
+            "0. CAN'T",
             "1. Bad",
             "2. Eh...",
             "3. Average",
@@ -194,6 +196,7 @@
           "name": "Climbing to Level 2?",
           "type":"dropdown",
           "options": [
+            "0. CAN'T",
             "1. Bad",
             "2. Eh...",
             "3. Average",
@@ -205,6 +208,7 @@
           "name": "Climbing to Level 3?",
           "type":"dropdown",
           "options": [
+            "0. CAN'T",
             "1. Bad",
             "2. Eh...",
             "3. Average",
